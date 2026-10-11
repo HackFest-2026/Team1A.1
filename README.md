@@ -306,16 +306,7 @@ Scenario: Active Mission route intersected by simulated CRITICAL road blockage
 #### Primary Purpose & Algorithmic Foundation
 Engine 6 governs incident triage, response planning, and multi-agency field unit command and control (Indian Navy QRF, Indian Coast Guard patrol units, NDRF flood rescue teams, combat engineers, and medical ambulances).
 
-- **Strict Finite State Machine (FSM)**:
-  Field units are managed via a strictly validated directed state machine:
-  $$\text{AVAILABLE} \longrightarrow \text{ASSIGNED} \longrightarrow \text{EN\_ROUTE} \longrightarrow \text{AT\_SCENE} \longrightarrow \text{OPERATING} \longrightarrow \text{COMPLETED} \longrightarrow \text{AVAILABLE}$$
-  Illegal state transitions (e.g. attempting to jump from `EN_ROUTE` directly to `COMPLETED`) are rejected by backend validation with HTTP 400 and an auditable error explanation.
-- **Capability Vector Matching**:
-  Maps incident categories directly to required operational skillsets and distance-optimized units:
-  $$\text{MatchScore}(u, i) = w_c \cdot \text{Capability}(u, i) + w_d \cdot \max\left(0, 1 - \frac{\text{Distance}(u, i)}{D_{\max}}\right)$$
-  - Coastal Infiltration / Suspicious Vessel $\implies$ `QRF_TEAM` (Quick Reaction Force)
-  - Marine Explosion / Shipboard Fire $\implies$ `FIRE_TENDER` + `AMBULANCE`
-  - Bridge Collapses / Roadway Obstructions $\implies$ `COMBAT_ENGINEERS` (Sappers / EOD)
+
 
 #### Measured Performance Profile
 - **FSM State Validation Latency**: $< 2.1\text{ ms}$ per transition request.
