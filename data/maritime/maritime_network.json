@@ -1,0 +1,405 @@
+{
+  "description": "Verified topological maritime sea-lane graph for Indian Ocean, Arabian Sea, and Bay of Bengal",
+  "disclaimer": "PROTOTYPE MARITIME NETWORK: Topological navigable sea corridor based on open deepwater routes. Does not account for dynamic bathymetry, real-time draft restrictions, tides, TSS schemes, weather, or restricted naval firing areas.",
+  "nodes": {
+    "mumbai": {
+      "id": "mumbai",
+      "name": "Port of Mumbai / JNPT",
+      "type": "PORT",
+      "country": "India",
+      "lat": 18.9438,
+      "lon": 72.8656
+    },
+    "marmagao": {
+      "id": "marmagao",
+      "name": "Marmagao Port (Goa)",
+      "type": "PORT",
+      "country": "India",
+      "lat": 15.4100,
+      "lon": 73.7900
+    },
+    "mangalore": {
+      "id": "mangalore",
+      "name": "New Mangalore Port",
+      "type": "PORT",
+      "country": "India",
+      "lat": 12.9200,
+      "lon": 74.8100
+    },
+    "kochi": {
+      "id": "kochi",
+      "name": "Cochin / Kochi Port",
+      "type": "PORT",
+      "country": "India",
+      "lat": 9.9667,
+      "lon": 76.2667
+    },
+    "tuticorin": {
+      "id": "tuticorin",
+      "name": "V.O. Chidambaranar Port (Tuticorin)",
+      "type": "PORT",
+      "country": "India",
+      "lat": 8.7500,
+      "lon": 78.1800
+    },
+    "colombo": {
+      "id": "colombo",
+      "name": "Port of Colombo",
+      "type": "PORT",
+      "country": "Sri Lanka",
+      "lat": 6.9400,
+      "lon": 79.8400
+    },
+    "galle": {
+      "id": "galle",
+      "name": "Port of Galle",
+      "type": "PORT",
+      "country": "Sri Lanka",
+      "lat": 6.0300,
+      "lon": 80.2200
+    },
+    "chennai": {
+      "id": "chennai",
+      "name": "Chennai Port",
+      "type": "PORT",
+      "country": "India",
+      "lat": 13.0827,
+      "lon": 80.2900
+    },
+    "visakhapatnam": {
+      "id": "visakhapatnam",
+      "name": "Visakhapatnam Port",
+      "type": "PORT",
+      "country": "India",
+      "lat": 17.6868,
+      "lon": 83.2185
+    },
+    "paradip": {
+      "id": "paradip",
+      "name": "Paradip Port",
+      "type": "PORT",
+      "country": "India",
+      "lat": 20.2600,
+      "lon": 86.6700
+    },
+    "kolkata_haldia": {
+      "id": "kolkata_haldia",
+      "name": "Haldia / Kolkata Port",
+      "type": "PORT",
+      "country": "India",
+      "lat": 22.0200,
+      "lon": 88.0800
+    },
+    "port_blair": {
+      "id": "port_blair",
+      "name": "Port Blair (Andaman)",
+      "type": "PORT",
+      "country": "India",
+      "lat": 11.6600,
+      "lon": 92.7400
+    },
+    "singapore": {
+      "id": "singapore",
+      "name": "Port of Singapore",
+      "type": "PORT",
+      "country": "Singapore",
+      "lat": 1.2640,
+      "lon": 103.8200
+    },
+    "karachi": {
+      "id": "karachi",
+      "name": "Port of Karachi",
+      "type": "PORT",
+      "country": "Pakistan",
+      "lat": 24.8000,
+      "lon": 66.9700
+    },
+    "salalah": {
+      "id": "salalah",
+      "name": "Port of Salalah",
+      "type": "PORT",
+      "country": "Oman",
+      "lat": 16.9400,
+      "lon": 54.0000
+    },
+    "djibouti": {
+      "id": "djibouti",
+      "name": "Port of Djibouti",
+      "type": "PORT",
+      "country": "Djibouti",
+      "lat": 11.5900,
+      "lon": 43.1500
+    },
+    "wp_mumbai_offshore": {
+      "id": "wp_mumbai_offshore",
+      "name": "Mumbai Deep Fairway",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 18.9000,
+      "lon": 72.4000
+    },
+    "wp_goa_offshore": {
+      "id": "wp_goa_offshore",
+      "name": "Goa Offshore Corridor",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 15.4000,
+      "lon": 73.3000
+    },
+    "wp_mangalore_offshore": {
+      "id": "wp_mangalore_offshore",
+      "name": "Mangalore Offshore Corridor",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 12.9000,
+      "lon": 74.3000
+    },
+    "wp_kochi_offshore": {
+      "id": "wp_kochi_offshore",
+      "name": "Kochi Fairway Corridor",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 9.9500,
+      "lon": 75.7000
+    },
+    "wp_cape_comorin_west": {
+      "id": "wp_cape_comorin_west",
+      "name": "Cape Comorin West Approach",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 7.8000,
+      "lon": 76.8000
+    },
+    "wp_cape_comorin_south": {
+      "id": "wp_cape_comorin_south",
+      "name": "Kanyakumari South Deep Lane",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 7.2000,
+      "lon": 77.6000
+    },
+    "wp_colombo_offshore": {
+      "id": "wp_colombo_offshore",
+      "name": "Colombo Outer Fairway",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 6.9500,
+      "lon": 79.4000
+    },
+    "wp_galle_offshore": {
+      "id": "wp_galle_offshore",
+      "name": "Galle Offshore Approach",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 5.9500,
+      "lon": 80.1500
+    },
+    "wp_dondra_head": {
+      "id": "wp_dondra_head",
+      "name": "Dondra Head International Sea Lane",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 5.7000,
+      "lon": 80.6000
+    },
+    "wp_gulf_of_mannar": {
+      "id": "wp_gulf_of_mannar",
+      "name": "Gulf of Mannar Deepway",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 8.3000,
+      "lon": 78.7000
+    },
+    "wp_tuticorin_offshore": {
+      "id": "wp_tuticorin_offshore",
+      "name": "Tuticorin Offshore Approach",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 8.7500,
+      "lon": 78.4000
+    },
+    "wp_sri_lanka_east": {
+      "id": "wp_sri_lanka_east",
+      "name": "East Sri Lanka Deepway",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 7.5000,
+      "lon": 82.2000
+    },
+    "wp_chennai_offshore": {
+      "id": "wp_chennai_offshore",
+      "name": "Chennai Approach Corridor",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 13.1000,
+      "lon": 80.6000
+    },
+    "wp_vizag_offshore": {
+      "id": "wp_vizag_offshore",
+      "name": "Visakhapatnam Deep Corridor",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 17.6500,
+      "lon": 83.6000
+    },
+    "wp_paradip_offshore": {
+      "id": "wp_paradip_offshore",
+      "name": "Paradip Offshore Fairway",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 20.2000,
+      "lon": 87.0000
+    },
+    "wp_bengal_north": {
+      "id": "wp_bengal_north",
+      "name": "Sandheads / North Bay of Bengal",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 21.5000,
+      "lon": 88.3000
+    },
+    "wp_andaman_sea_west": {
+      "id": "wp_andaman_sea_west",
+      "name": "West Andaman Corridor",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 11.6000,
+      "lon": 92.2000
+    },
+    "wp_ten_degree_channel": {
+      "id": "wp_ten_degree_channel",
+      "name": "Ten Degree Channel Passage",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 10.0000,
+      "lon": 92.5000
+    },
+    "wp_six_degree_channel": {
+      "id": "wp_six_degree_channel",
+      "name": "Great Channel (Six Degree Channel)",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 6.0000,
+      "lon": 94.5000
+    },
+    "wp_malacca_north": {
+      "id": "wp_malacca_north",
+      "name": "Strait of Malacca North Entrance",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 5.5000,
+      "lon": 97.5000
+    },
+    "wp_malacca_mid": {
+      "id": "wp_malacca_mid",
+      "name": "Strait of Malacca Mid Corridor",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 3.0000,
+      "lon": 100.5000
+    },
+    "wp_singapore_approach": {
+      "id": "wp_singapore_approach",
+      "name": "Singapore Western Pilot Approach",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 1.2000,
+      "lon": 103.5000
+    },
+    "wp_arabian_sea_central": {
+      "id": "wp_arabian_sea_central",
+      "name": "Central Arabian Sea Transit",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 15.0000,
+      "lon": 65.0000
+    },
+    "wp_karachi_offshore": {
+      "id": "wp_karachi_offshore",
+      "name": "Karachi Fairway Approach",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 24.5000,
+      "lon": 66.7000
+    },
+    "wp_gulf_of_oman": {
+      "id": "wp_gulf_of_oman",
+      "name": "Gulf of Oman Sea Lane",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 24.0000,
+      "lon": 60.0000
+    },
+    "wp_salalah_offshore": {
+      "id": "wp_salalah_offshore",
+      "name": "Salalah Deep Corridor",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 16.8000,
+      "lon": 54.2000
+    },
+    "wp_gulf_of_aden": {
+      "id": "wp_gulf_of_aden",
+      "name": "Gulf of Aden IRTC Corridor",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 12.5000,
+      "lon": 48.0000
+    },
+    "wp_bab_el_mandeb": {
+      "id": "wp_bab_el_mandeb",
+      "name": "Bab-el-Mandeb Strait Fairway",
+      "type": "WAYPOINT",
+      "country": "International Waters",
+      "lat": 12.3000,
+      "lon": 43.5000
+    }
+  },
+  "connections": [
+    ["mumbai", "wp_mumbai_offshore"],
+    ["wp_mumbai_offshore", "wp_goa_offshore"],
+    ["wp_goa_offshore", "marmagao"],
+    ["wp_goa_offshore", "wp_mangalore_offshore"],
+    ["wp_mangalore_offshore", "mangalore"],
+    ["wp_mangalore_offshore", "wp_kochi_offshore"],
+    ["wp_kochi_offshore", "kochi"],
+    ["wp_kochi_offshore", "wp_cape_comorin_west"],
+    ["wp_cape_comorin_west", "wp_cape_comorin_south"],
+    ["wp_cape_comorin_south", "wp_colombo_offshore"],
+    ["wp_colombo_offshore", "colombo"],
+    ["wp_colombo_offshore", "wp_galle_offshore"],
+    ["wp_galle_offshore", "galle"],
+    ["wp_galle_offshore", "wp_dondra_head"],
+    ["wp_cape_comorin_south", "wp_dondra_head"],
+    ["wp_cape_comorin_west", "wp_gulf_of_mannar"],
+    ["wp_gulf_of_mannar", "wp_tuticorin_offshore"],
+    ["wp_tuticorin_offshore", "tuticorin"],
+    ["wp_dondra_head", "wp_sri_lanka_east"],
+    ["wp_sri_lanka_east", "wp_chennai_offshore"],
+    ["wp_chennai_offshore", "chennai"],
+    ["wp_chennai_offshore", "wp_vizag_offshore"],
+    ["wp_vizag_offshore", "visakhapatnam"],
+    ["wp_vizag_offshore", "wp_paradip_offshore"],
+    ["wp_paradip_offshore", "paradip"],
+    ["wp_paradip_offshore", "wp_bengal_north"],
+    ["wp_bengal_north", "kolkata_haldia"],
+    ["wp_chennai_offshore", "wp_andaman_sea_west"],
+    ["wp_andaman_sea_west", "port_blair"],
+    ["wp_andaman_sea_west", "wp_ten_degree_channel"],
+    ["wp_dondra_head", "wp_six_degree_channel"],
+    ["wp_ten_degree_channel", "wp_six_degree_channel"],
+    ["wp_six_degree_channel", "wp_malacca_north"],
+    ["wp_malacca_north", "wp_malacca_mid"],
+    ["wp_malacca_mid", "wp_singapore_approach"],
+    ["wp_singapore_approach", "singapore"],
+    ["wp_mumbai_offshore", "wp_karachi_offshore"],
+    ["wp_karachi_offshore", "karachi"],
+    ["wp_mumbai_offshore", "wp_arabian_sea_central"],
+    ["wp_arabian_sea_central", "wp_salalah_offshore"],
+    ["wp_salalah_offshore", "salalah"],
+    ["wp_salalah_offshore", "wp_gulf_of_aden"],
+    ["wp_gulf_of_aden", "wp_bab_el_mandeb"],
+    ["wp_bab_el_mandeb", "djibouti"],
+    ["wp_karachi_offshore", "wp_gulf_of_oman"]
+  ]
+}

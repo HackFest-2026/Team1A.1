@@ -1,0 +1,149 @@
+@import './theme/palette.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------- base */
+:root {
+  --shadow-panel: 0 1px 2px rgb(15 23 42 / 0.06), 0 1px 3px rgb(15 23 42 / 0.05);
+  --shadow-raised: 0 8px 24px rgb(15 23 42 / 0.12), 0 2px 6px rgb(15 23 42 / 0.08);
+  --focus-ring: 0 0 0 2px rgb(var(--bg-white)), 0 0 0 4px rgb(var(--border-accent));
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --shadow-panel: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 1px 3px rgb(0 0 0 / 0.45);
+  --shadow-raised: 0 12px 32px rgb(0 0 0 / 0.55), 0 2px 8px rgb(0 0 0 / 0.4);
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(var(--bg-canvas));
+  color: rgb(var(--text-slate-900));
+  font-family: theme('fontFamily.sans');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'tnum' 1, 'cv11' 1;
+}
+
+/* Visible keyboard focus everywhere; mouse clicks keep a clean look. */
+:where(button, a, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 6px;
+}
+
+::placeholder { color: rgb(var(--text-slate-400)); opacity: 1; }
+
+* { scrollbar-width: thin; scrollbar-color: rgb(var(--border-slate-300)) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: rgb(var(--border-slate-300)); border-radius: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* ------------------------------------------------------------ components */
+@layer components {
+  .panel {
+    @apply bg-white border border-line rounded-lg shadow-panel;
+  }
+  .panel-title {
+    @apply text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-500;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-semibold
+      transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary { @apply btn bg-accent text-white hover:bg-accent-strong; }
+  .btn-secondary { @apply btn bg-slate-100 text-slate-800 border border-slate-200 hover:bg-slate-200; }
+  .btn-danger { @apply btn bg-red-700 text-white hover:bg-red-800; }
+  .btn-success { @apply btn bg-emerald-700 text-white hover:bg-emerald-800; }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-semibold leading-4 whitespace-nowrap;
+  }
+  .chip-ok { @apply chip bg-emerald-50 text-emerald-800 border-emerald-200; }
+  .chip-warn { @apply chip bg-amber-50 text-amber-800 border-amber-200; }
+  .chip-bad { @apply chip bg-red-50 text-red-800 border-red-200; }
+  .chip-info { @apply chip bg-blue-50 text-blue-800 border-blue-200; }
+  .chip-muted { @apply chip bg-slate-100 text-slate-600 border-slate-200; }
+  .dot { @apply inline-block w-1.5 h-1.5 rounded-full; }
+
+  /* Indian Patriotic Maritime Command Utility Accents */
+  .tricolour-bar {
+    height: 3px;
+    background: linear-gradient(90deg, #FF9933 0%, #FF9933 33.3%, #F4F6F8 33.3%, #F4F6F8 66.6%, #138808 66.6%, #138808 100%);
+    width: 100%;
+  }
+
+  .tricolour-bar-vertical {
+    width: 3px;
+    background: linear-gradient(180deg, #FF9933 0%, #FF9933 33.3%, #F4F6F8 33.3%, #F4F6F8 66.6%, #138808 66.6%, #138808 100%);
+  }
+
+  .nautical-grid {
+    background-image: radial-gradient(rgba(120, 145, 165, 0.12) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .technical-border {
+    border: 1px solid rgba(120, 145, 165, 0.25);
+    background-color: rgba(16, 31, 45, 0.85);
+  }
+
+  .command-card {
+    background-color: rgba(16, 31, 45, 0.7);
+    border: 1px solid rgba(120, 145, 165, 0.2);
+    border-radius: 0.5rem;
+  }
+}
+
+/* -------------------------------------------------------------- leaflet */
+.leaflet-container {
+  font-family: theme('fontFamily.sans');
+  background: rgb(var(--bg-slate-100));
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: rgb(var(--bg-white));
+  color: rgb(var(--text-slate-900));
+  box-shadow: var(--shadow-raised);
+}
+.leaflet-popup-content-wrapper { border: 1px solid rgb(var(--border-line)); border-radius: 10px; }
+.leaflet-container a.leaflet-popup-close-button { color: rgb(var(--text-slate-500)); }
+.leaflet-tooltip {
+  background: rgb(var(--bg-white));
+  color: rgb(var(--text-slate-900));
+  border: 1px solid rgb(var(--border-line));
+  box-shadow: var(--shadow-panel);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.leaflet-tooltip-top::before { border-top-color: rgb(var(--border-line)); }
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  background: rgb(var(--bg-white));
+  color: rgb(var(--text-slate-800));
+  border-bottom-color: rgb(var(--border-line));
+}
+.leaflet-bar { border: 1px solid rgb(var(--border-line)) !important; box-shadow: var(--shadow-panel) !important; }
+.leaflet-control-attribution {
+  background: rgb(var(--bg-white) / 0.85) !important;
+  color: rgb(var(--text-slate-600));
+}
+.leaflet-control-attribution a { color: rgb(var(--text-accent)); }
+
+/* Dark basemap: the OpenStreetMap tile layer (className="basemap-tiles") is re-toned
+   for the dark theme. Satellite imagery is never recoloured. */
+:root[data-theme="dark"] .basemap-tiles {
+  filter: invert(1) hue-rotate(185deg) brightness(0.78) contrast(0.92) saturate(0.55);
+}

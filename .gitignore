@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+backend/venv/
+.venv/
+*.env
+.env.local
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+*.pptx
+*.ppt
+AEGIS_COP_*.md
+AEGIS_COP_*.pptx
+
+# Temporary / Cache
+cache/
+scratch/
+.pytest_cache/
+
+# Restricted geospatial originals (see docs/project/GEO_DATA_AND_VALIDATION.md)
+# NRSC/ISRO CartoDEM is single-user licensed and excludes Internet hosting.
+# Keep the files locally; never commit them.
+data/terrain/*
+!data/terrain/README.md
+
+# Database / Runtime Data
+data/*.db
+data/*.db-journal
+data/*.db-shm
+data/*.db-wal
+
+# Environment files and credentials (keep only the *.env.example templates)
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+*.pem
+*.key
+*.p12
+credentials*.json
+
+# Any local database, wherever it is created
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Restricted / large raster data anywhere in the tree (CartoDEM and derivatives)
+*.tif
+*.tiff
+*.zip
+
+# Logs and local tooling output
+*.log
+.coverage
+htmlcov/
+
+# Generated video intelligence outputs (large runtime files)
+data/vision_runs/

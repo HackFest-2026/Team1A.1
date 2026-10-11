@@ -1,0 +1,26 @@
+# AEGIS-COP compatible baseline pins for Windows x64 + Python 3.10.
+# This is a direct-dependency constraints file, not a pip freeze of every transitive package.
+# Install with:
+#   python -m pip install -r backend\requirements-dev.txt -c backend\requirements.lock.txt
+# Versions are pinned to avoid the original Linux/Python 3.12 lock incompatibilities.
+fastapi==0.115.12
+uvicorn==0.34.0
+pydantic==2.11.3
+python-dotenv==1.1.0
+python-multipart==0.0.20
+python-dateutil==2.9.0.post0
+osmnx==2.0.5
+networkx==3.4.2
+geopandas==1.1.1
+shapely==2.1.1
+scikit-learn==1.6.1
+rasterio==1.4.3
+requests==2.32.3
+SQLAlchemy==2.0.40
+numpy==2.2.6
+pandas==2.2.3
+scipy==1.15.2
+pyproj==3.7.1
+pyogrio==0.11.0
+pytest==8.3.5
+httpx==0.28.1
