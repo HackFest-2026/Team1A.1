@@ -1,7 +1,7 @@
 # AEGIS-COP: Maritime & Coastal Defense Common Operating Picture
 
 
-![AEGIS-COP Maritime Intelligence Dashboard](docs/screenshots/01-overview-before-mission.png)
+
 
 ```
 Coastal Video / AIS / Radar Ingestion ──► Multi-Modal Threat Assessment ──► Common Operating Picture (COP) ──► Topological Sea & Tactical Road Routing ──► Human-in-the-Loop Mission Command
