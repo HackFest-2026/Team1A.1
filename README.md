@@ -255,12 +255,6 @@ Cruising Speed: 14.0 knots
 #### Primary Purpose & Algorithmic Foundation
 Engine 4 models coastal command center sensor correlation (simulating Indian Navy IMAC Gurgaon and Directorate General of Lighthouses and Lightships radar networks). It cross-examines raw primary radar returns against commercial AIS broadcasts to expose **dark vessels** and spoofed transponders.
 
-- **Kinematic Contact Correlation**: Compares radar track vector $\mathbf{v}_r = (x_r, y_r, \text{SOG}_r, \text{COG}_r)$ against broadcast AIS telemetry $\mathbf{v}_a = (x_a, y_a, \text{SOG}_a, \text{COG}_a)$.
-- **Dark Craft Identification Rule**:
-  $$\forall a \in \text{AIS}_{\text{active}}, \quad \text{Haversine}(x_r, y_r, x_a, y_a) > 5.0\text{ NM} \implies \text{is\_dark\_vessel} = \text{True}, \; \text{status} = \text{"missing"}$$
-- **Spoofing / Mismatch Detection Rule**:
-  $$\Delta d = \text{Haversine}(x_r, y_r, x_a, y_a) > 2.5\text{ NM} \implies \text{status} = \text{"mismatch"}$$
-  $$|\text{COG}_r - \text{COG}_a| > 30^\circ \implies \text{flag: KINEMATIC\_COURSE\_ANOMALY}$$
 
 #### Measured Operational Performance
 - **Contact Ingestion Latency**: $< 6.2\text{ ms}$ for 100 tactical radar tracks.
